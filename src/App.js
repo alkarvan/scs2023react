@@ -1,9 +1,9 @@
-import {Posts} from "./components/PostConteiner/Posts/Posts";
+import {Missions} from "./components/SpaceXConteiner/Missions/Missions";
 
 const App = () => {
     return (
         <div>
-            <Posts/>
+            <Missions/>
         </div>
     );
 };

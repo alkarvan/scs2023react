@@ -1,16 +1,10 @@
-const baseURL = 'https://jsonplaceholder.typicode.com'
+const baseURL = 'https://api.spacexdata.com'
 
-const posts ='/posts'
-const users ='/users'
+const missions ='/v3/launches/'
 
 const urls = {
-    users: {
-        base: users,
-        byId: (id) => `${users}/${id}`
-    },
-    posts: {
-          base: posts,
-          byId: (id) => `${posts}/${id}`
+    missions: {
+          base: missions
     }
 }
 
