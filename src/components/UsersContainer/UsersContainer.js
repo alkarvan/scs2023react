@@ -12,7 +12,7 @@ const UsersContainer = () => {
 
     return (
         <div>
-            <UserForm/>
+            <UserForm setUsers={setUsers}/>
             <hr/>
             <Users users={users}/>
         </div>

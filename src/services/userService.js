@@ -6,12 +6,7 @@ const userService = {
     create: (data) => apiService.post(urls.users, data)
 }
 
-const postService = {
-    getAll: () => apiService.get(urls.posts),
-    create: (data) => apiService.post(urls.posts, data)
-}
 
 export {
-    userService,
-    postService
+    userService
 }
