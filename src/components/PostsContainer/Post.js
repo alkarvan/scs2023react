@@ -1,9 +1,9 @@
-const App = () => {
+const Post = () => {
     return (
         <div>
-            App
+            Post
         </div>
     );
 };
 
-export {App};
+export {Post};
