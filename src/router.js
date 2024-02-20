@@ -13,14 +13,31 @@ const router = createBrowserRouter([
     {
         path:'', element:<MainLayout/>, errorElement:<ErrorPage/>, children:[
             {index:true, element:<Navigate to={'users'}/>},
+            // {
+            //     // path:'users', element:<UsersPage/>, loader: () => usersService.getAll(), children: [
+            //     //     {
+            //     //         path: ':id', element:<UserDetailsPage/>
+            //     //     }
+            //     //
+            //     // ]
+    // },
             {
-                path:'users', element:<UsersPage/>, loader: () => usersService.getAll(), children: [
-                    {
-                        path: ':id', element:<UserDetailsPage/>
-                    }
+                path: 'users', element: <UsersPage/>, loader: () => usersService.getAll()
+            },
+            {
+                path: '', element:<UserDetailsPage/>, loader: ({params:{id}}) => usersService.getById(id)
+            },
+            // {
+            //     path:'users', element:<UsersPage/>, loader: () => usersService.getAll(), children: [
+            //         {
+            //             path: ':id', element:<UserDetailsPage/>, loader: ({params:{id}}) => usersService.getById(id.toString())
+            //         }
+            //
+            //     ]
+            // },
 
-                ]
-            }
+
+
         ]
     }
 
