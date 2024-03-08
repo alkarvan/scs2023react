@@ -10,7 +10,8 @@ const Cars = () => {
     const dispatch = useDispatch();
 
     useEffect(()=>{
-        carService.getAll().then(({data}) => dispatch(carActions.setAllCars(data)))
+        // carService.getAll().then(({data}) => dispatch(carActions.setAllCars(data)))
+        dispatch(carActions.getAll())
     }, [trigger, dispatch])
 
     return (
